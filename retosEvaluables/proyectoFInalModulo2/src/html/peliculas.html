@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>IMDB App - Peliculas</title>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="menu__header">
+        <a href="../../index.html"><h1 class="title title--small"><span>IMDB</span><br />app</h1></a>
+        <h2 class="subtitle">Películas</h2>
+      </div>
+      <div class="control__container--top">
+        <div class="control__item--small">
+          <a class="control__title control__title--small" href="profesionales.html">Profesionales</a>
+        </div>
+        <div class="control__item--small">
+          <a class="control__title control__title--small" href="#registro">Añadir película</a>
+        </div>
+      </div>
+    </section>
+    <section id="peliculas" class="card__container"></section>
+    <section id="registro">
+      <legend>Introduce una nueva película</legend>
+      <form action="">
+          <label for="title">Título</label>
+          <input type="text" id="title" name="title">
+          <label for="releaseYear">Año de lanzamiento</label>
+          <input type="text" id="releaseYear" name="releaseYear">
+          <label for="genre">Género</label>
+          <input type="text" id="genre" name="genre">
+          <label for="nationality">Pais</label>
+          <input type="text" id="nationality" name="nationality">
+          <label for="languaje">Idioma original</label>
+          <input type="text" id="languaje" name="languaje">
+          <label for="platform">Plataforma</label>
+          <input type="text" id="platform" name="platform">
+          <label class="radio" for="isMCU">Es del MCU</label>
+        <div class="radio__container">
+          <div class="radio__wrapper">
+            <label class="radio__label" for="isMCU">Sí</label>
+            <input class="raidio__input" type="radio" id="isMCU-yes" name="isMCU" value="1">
+          </div>
+          <div class="radio__wrapper">
+            <label class="radio__label" for="isMCU">No</label>
+            <input class="raidio__input" type="radio" id="isMCU-no" name="isMCU" value="0">
+          </div>
+        </div>
+          <label for="mainCharacterName">Protagonista</label>
+          <input type="text" id="mainCharacterName" name="mainCharacterName">
+          <label for="producer">Productor</label>
+          <input type="text" id="producer" name="producer">
+          <label for="distributor">Distribuidor</label>
+          <input type="text" id="distributor" name="distributor">
+          <label for="photo">Cartel</label>
+          <input type="text" id="photo" name="photo" placeholder="Escribe la url">
+        </fieldset>
+      </form>
+      <button id="submitPelicula" onclick="registrarPelicula()">Añadir película</button>
+    </section>
+
+    <!-- scripts -->
+    <script src="../typescript/main.js"></script>
+  </body>
+</html>
+
